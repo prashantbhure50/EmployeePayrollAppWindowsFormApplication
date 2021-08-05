@@ -85,7 +85,7 @@ namespace EmployeePayrollAppWindows
             this.button1.BackColor = System.Drawing.Color.YellowGreen;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(1006, 270);
+            this.button1.Location = new System.Drawing.Point(867, 270);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(170, 52);
             this.button1.TabIndex = 3;
@@ -185,23 +185,25 @@ namespace EmployeePayrollAppWindows
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeight = 34;
-            this.dataGridView1.Location = new System.Drawing.Point(149, 443);
+            this.dataGridView1.Location = new System.Drawing.Point(149, 434);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(888, 275);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.Size = new System.Drawing.Size(886, 507);
+            this.dataGridView1.TabIndex = 12;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
+            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick_1);
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(1054, 443);
+            this.button9.BackColor = System.Drawing.Color.YellowGreen;
+            this.button9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button9.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button9.Location = new System.Drawing.Point(1057, 270);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(112, 34);
+            this.button9.Size = new System.Drawing.Size(170, 52);
             this.button9.TabIndex = 11;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Text = "Delete User";
+            this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // Form2

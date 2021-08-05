@@ -34,14 +34,50 @@ namespace EmployeePayrollAppWindows
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(Gender);
+           
             if(Gender=="Male")
             {
                 rbmale.Checked=true;
             }
             if (Gender == "Female")
             {
-                rbfemale.Checked = true;
+                rbmale.Checked = true;
+            }
+            if (Department == "HR")
+            {
+                hr.Checked = true;
+            }
+            if (Department == "Sales")
+            {
+                sales.Checked = true;
+            }
+            if (Department == "Finance")
+            {
+                finance.Checked = true;
+            }
+            if (Department == "Engineer")
+            {
+                engineer.Checked = true;
+            }
+            if (Department == "Others")
+            {
+                checkBox11.Checked = true;
+            }
+            if (profileimg == "1")
+            {
+                propic1.Checked = true;
+            }
+            if (profileimg == "2")
+            {
+                propic2.Checked = true;
+            }
+            if (profileimg == "3")
+            {
+                propic3.Checked = true;
+            }
+            if (profileimg == "4")
+            {
+                propic4.Checked = true;
             }
         }
         private void button2_Click(object sender, EventArgs e)

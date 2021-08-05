@@ -563,7 +563,7 @@ namespace EmployeePayrollAppWindows
             this.Controls.Add(this.lblDisplay);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.Submit);
-           
+          
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Salary)).EndInit();

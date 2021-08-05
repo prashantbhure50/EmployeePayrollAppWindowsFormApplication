@@ -19,11 +19,7 @@ namespace EmployeePayrollAppWindows
        public static int id;
         public static string  Name, Department, Gender, Salary, Date;
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+       
         private void button9_Click(object sender, EventArgs e)
         {
             //id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
@@ -42,35 +38,29 @@ namespace EmployeePayrollAppWindows
             }
             
         }
-
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-            
-
         }
 
-        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellContentDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
             id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             Name = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             Gender = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             Department = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            //Salary = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            Salary = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             Form1 f1 = new Form1();
             f1.Show();
-
         }
 
+       
         public Form2()
         {
             InitializeComponent();
             con = new SqlConnection(path); 
             display();
-          
-          
         }
-
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
@@ -81,8 +71,6 @@ namespace EmployeePayrollAppWindows
             MessageBox.Show("Record Deleted From Data");
             display();
         }
-
-
         public void display()
         {
             try
@@ -100,9 +88,5 @@ namespace EmployeePayrollAppWindows
             }
 
         }
-
-       
-
-        
     }
 }
