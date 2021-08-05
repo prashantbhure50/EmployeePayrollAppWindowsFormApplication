@@ -65,8 +65,6 @@ namespace EmployeePayrollAppWindows
             this.Date = new System.Windows.Forms.DateTimePicker();
             this.label17 = new System.Windows.Forms.Label();
             this.Reset = new System.Windows.Forms.Button();
-            this.rbmale = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.Notes = new System.Windows.Forms.RichTextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -76,12 +74,16 @@ namespace EmployeePayrollAppWindows
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.rbfemale = new System.Windows.Forms.RadioButton();
+            this.rbmale = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.Salary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Submit
@@ -218,7 +220,7 @@ namespace EmployeePayrollAppWindows
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(498, 395);
+            this.label10.Location = new System.Drawing.Point(54, 15);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(50, 25);
             this.label10.TabIndex = 20;
@@ -227,7 +229,7 @@ namespace EmployeePayrollAppWindows
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(625, 396);
+            this.label11.Location = new System.Drawing.Point(220, 13);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(68, 25);
             this.label11.TabIndex = 21;
@@ -365,7 +367,7 @@ namespace EmployeePayrollAppWindows
             // 
             // Salary
             // 
-            this.Salary.Location = new System.Drawing.Point(516, 536);
+            this.Salary.Location = new System.Drawing.Point(497, 531);
             this.Salary.Maximum = 400000;
             this.Salary.Minimum = 1;
             this.Salary.Name = "Salary";
@@ -400,24 +402,6 @@ namespace EmployeePayrollAppWindows
             this.Reset.TabIndex = 46;
             this.Reset.Text = "Reset";
             this.Reset.UseVisualStyleBackColor = true;
-            // 
-            // rbmale
-            // 
-            this.rbmale.AutoSize = true;
-            this.rbmale.Location = new System.Drawing.Point(470, 396);
-            this.rbmale.Name = "rbmale";
-            this.rbmale.Size = new System.Drawing.Size(22, 21);
-            this.rbmale.TabIndex = 47;
-            this.rbmale.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(596, 399);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(22, 21);
-            this.checkBox2.TabIndex = 48;
-            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // Notes
             // 
@@ -474,10 +458,10 @@ namespace EmployeePayrollAppWindows
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(116, 37);
+            this.pictureBox5.Location = new System.Drawing.Point(104, 46);
             this.pictureBox5.MaximumSize = new System.Drawing.Size(300, 300);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(65, 92);
+            this.pictureBox5.Size = new System.Drawing.Size(85, 90);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 56;
             this.pictureBox5.TabStop = false;
@@ -500,11 +484,43 @@ namespace EmployeePayrollAppWindows
             this.label19.TabIndex = 58;
             this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
+            // rbfemale
+            // 
+            this.rbfemale.Location = new System.Drawing.Point(193, 15);
+            this.rbfemale.Name = "rbfemale";
+            this.rbfemale.Size = new System.Drawing.Size(21, 24);
+            this.rbfemale.TabIndex = 0;
+            // 
+            // rbmale
+            // 
+            this.rbmale.AutoSize = true;
+            this.rbmale.Location = new System.Drawing.Point(27, 15);
+            this.rbmale.Name = "rbmale";
+            this.rbmale.Size = new System.Drawing.Size(21, 20);
+            this.rbmale.TabIndex = 61;
+            this.rbmale.TabStop = true;
+            this.rbmale.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbfemale);
+            this.groupBox1.Controls.Add(this.rbmale);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.groupBox1.Location = new System.Drawing.Point(449, 396);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(330, 41);
+            this.groupBox1.TabIndex = 62;
+            this.groupBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1439, 989);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.pictureBox5);
@@ -514,8 +530,6 @@ namespace EmployeePayrollAppWindows
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.Notes);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.rbmale);
             this.Controls.Add(this.Reset);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.Date);
@@ -534,8 +548,6 @@ namespace EmployeePayrollAppWindows
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.Name);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -549,6 +561,7 @@ namespace EmployeePayrollAppWindows
             this.Controls.Add(this.lblDisplay);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.Submit);
+            
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Salary)).EndInit();
@@ -557,6 +570,8 @@ namespace EmployeePayrollAppWindows
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -598,8 +613,6 @@ namespace EmployeePayrollAppWindows
         private System.Windows.Forms.DateTimePicker Date;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button Reset;
-        private System.Windows.Forms.CheckBox rbmale;
-        private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.RichTextBox Notes;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -609,6 +622,9 @@ namespace EmployeePayrollAppWindows
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.RadioButton rbfemale;
+        private System.Windows.Forms.RadioButton rbmale;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

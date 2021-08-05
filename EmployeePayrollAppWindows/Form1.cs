@@ -110,6 +110,7 @@ namespace EmployeePayrollAppWindows
                     command.ExecuteNonQuery();
                     con.Close();
                     MessageBox.Show("Your action has been recorded");
+                    clear();
                 }
                 catch (Exception ex)
                 {
@@ -117,11 +118,18 @@ namespace EmployeePayrollAppWindows
                 }
             }
         }
-
+        public void clear()
+        {
+            Name.Text = "";
+            Salary.Value = 0;
+            Notes.Text = "";
+        }
         private void label19_Click(object sender, EventArgs e)
         {
 
         }
+
+       
 
         private void Name_TextChanged(object sender, EventArgs e)
         {

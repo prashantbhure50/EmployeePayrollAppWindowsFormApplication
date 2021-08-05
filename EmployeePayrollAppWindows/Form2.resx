@@ -1,64 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<root>
-  <!-- 
-    Microsoft ResX Schema 
-    
-    Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
-    associated with the data types.
-    
-    Example:
-    
-    ... ado.net/XML headers & schema ...
-    <resheader name="resmimetype">text/microsoft-resx</resheader>
-    <resheader name="version">2.0</resheader>
-    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
-        <value>[base64 mime encoded serialized .NET Framework object]</value>
-    </data>
-    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
-        <comment>This is a comment</comment>
-    </data>
-                
-    There are any number of "resheader" rows that contain simple 
-    name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
-    mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
-    extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
-    read any of the formats listed below.
-    
-    mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
-            : and then encoded with base64 encoding.
-    
-    mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-            : and then encoded with base64 encoding.
-
-    mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
-            : using a System.ComponentModel.TypeConverter
-            : and then encoded with base64 encoding.
-    -->
+﻿<root>
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
@@ -117,4 +57,38 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACoAAAApCAYAAABDV7v1AAAABGdBTUEAALGPC/xhBQAAA2pJREFUWEft
+        l99LU2EYx/sDgi6Cgi6C7gq66CLooruIoKuw8kpESzAzTBKLKKMoS8wMU/ohYimKTdNt/pz5My3XnI45
+        szmdOrU5TV3qxOunPa+8th/PPOfsnHSCgw+Hc57v2T6c97zP+24P7JAPE51xm6DWcC3iUH+7AVpd8z/R
+        gYky+GLJAdeCLaKwDBsgO7/IX9RoK4a1tbWIYmJyeldUURQVnXc7oN2cCeUdUfCh5Rw74jlep/JSUEy0
+        cyALnlbuh8cf9waB11GYuk8siog2GW9vSFV0XgbTaDnYplrAbFexc16r+36TvF8MskUHJzRM4olqHxMj
+        M+MaVsecZayazAghW7RQd5oJYO+l6pzuwZcs97rhJFkXQpaoa2GY/XhW1QFY8bjJDGd1dYXlMO+cHyIz
+        myFLFN9D/OH33hlO1QPBHOatk01kfTO2RXTIUU/WN0OhoT8oauhzag6z/JYPPfK28RT7cZwsVJ2j//mG
+        5QrqT5B1IWSLYutBAWzqoYbUOqljTx1z2GOpjBCyRRGtPplJIJ++xsGPcS2MObvZEc95D1X3JJL3i0ER
+        UQSXSC4UCF7/3J9B3icWxUQRnCStpkdQ0nqevbt4RMFQk2fqlxM0jS3g8XjIui+Kikol61UhnImKA11b
+        F1n35b+Izi3aYdb79wEJ1bZqdW0QnZDKRG9lPBOUVUTUvexi2zy+7geSX3ccGnrTWC/FfKWmkQkG0q03
+        Bn03R7aocbgYsqsP+Ym9UB+BPO0xhu91u3P9qcWn3GViFTX1YOg3Q6lKDc8LimB27nfQ93NkifruQ3F5
+        HPBu4QKHGp/i6HQHq/Frscl3NkQdXgHffCjCFuUrDbYeg7WQzISirErrN+QX41OgvUtPZjlhieJk4X87
+        +kZKyYwQ1XXNkJT+EC7EJjPZs5eugNVmJ7NIWKJ8JarsiiHrUrmXmctk8V2l6ohkUd9dkMPVS2aESEi9
+        DzFJ6ZD3roTJRV9db1PYsqg8IlkU5VAyT3uUrIsBRfn7yUlMewBLS8tkHpEsijskFBW7WabAJdPQZ4br
+        3ncUJbE1Lbr/kFmOZNHxmR42kXBNp+pSwGHHSWSyCG+kw5pMfIXZSsIS3Q52RZUmSLRvpBxUTblssxBJ
+        4DbQT3RqZgxKVJqIRO9taRuiO+GzK6rsB+AveVpUee3hksEAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAGYSURBVHhe7duhUZxxFEXxFRGRyJSQjlIIggJSSkpICRSAQCAQFEEByTsCd1Tg8r/Zeb+ZI3ff
+        3W9m5XdZa6211lqrwbfpafrzj/FZvuMqvffhvHWVD+mjHs5b/81DsvGNHWNjGjvGxjR2jI1p7Bgb09gx
+        Nqaxtdb1s//+yerYyJPVsZEnq2MjT1bHRp6sjo08WR0bSWl2k+rYSEqzm1THRlKa3aQ6NpLS7CbVsZGU
+        Zjepjo2kNLtJdWwkpdlNqmMjKc1uUh0bSWl2k+rYSEqzm1THRlKa3aQ6NpLS7CbVsZGUZjepjo2kNLtJ
+        dWwkpdlNqmMjKc1uUh0bSWl2k+rYSEqzm1THRlKa3aQ6NpLS7CbVsZGUZjepjo2kNLtJdWwkpdlNqmMj
+        Kc1uUh0bSWl2k+rYSEqzm1THRlKa3aQ6NpLS7CbVsZGUZjepjo2kNLtJdWzkqXgbqM7zZGNP9Guq83Oy
+        sSf6MdW5mV4mG/yZ/Z5qfZ8eJhv+GXG7/k3EL9PddD+9TvZDPrrH6Xb6Oq211lprrZV2ufwFhSE12+RA
+        9goAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>
