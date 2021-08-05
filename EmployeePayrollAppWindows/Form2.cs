@@ -16,24 +16,80 @@ namespace EmployeePayrollAppWindows
         SqlCommand command;
         SqlDataAdapter adp;
         DataTable dt;
+       public static int id;
+        public static string  Name, Department, Gender, Salary, Date;
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            //id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            if(id>0)
+            {
+                con.Open();
+                command = new SqlCommand("DELETE FROM RegisterUser WHERE ID='" + id + "'", con);
+                command.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Record Deleted From Data");
+                display();
+            }
+            else
+            {
+                MessageBox.Show("Please select Row");
+            }
+            
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            
+
+        }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            Name = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            Gender = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            Department = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            //Salary = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            Form1 f1 = new Form1();
+            f1.Show();
+
+        }
+
         public Form2()
         {
             InitializeComponent();
-            con = new SqlConnection(path);
+            con = new SqlConnection(path); 
+            display();
+          
+          
+        }
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            con.Open();
+            command = new SqlCommand("DELETE FROM RegisterUser WHERE ID='" + id + "'", con);
+            command.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Record Deleted From Data");
             display();
         }
 
-        private void button8_Click(object sender, EventArgs e)
-        {
 
-        }
         public void display()
         {
             try
             {
                 dt = new DataTable();
                 con.Open();
-                adp = new SqlDataAdapter("SELECT RegisterUser.Name,RegisterUser.Gender,RegisterUser.Departmant,RegisterUser.Salary,RegisterUser.Date from RegisterUser", con);
+                adp = new SqlDataAdapter("SELECT RegisterUser.ID, RegisterUser.Name,RegisterUser.Gender,RegisterUser.Department,RegisterUser.Salary,RegisterUser.Date from RegisterUser", con);
                 adp.Fill(dt);
                 dataGridView1.DataSource = dt;
                 con.Close();
@@ -45,14 +101,8 @@ namespace EmployeePayrollAppWindows
 
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            con.Open();
-            SqlCommand command = new SqlCommand("Register", this.con);
-    
-            con.Close();
-            MessageBox.Show("Your action has been recorded");
-           
-        }
+       
+
+        
     }
 }

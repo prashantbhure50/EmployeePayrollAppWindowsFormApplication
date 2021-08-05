@@ -16,18 +16,33 @@ namespace EmployeePayrollAppWindows
         string path = @"Data Source=(localdb)\ProjectsV13;Initial Catalog=EmployeePayroll;Integrated Security=True";
         SqlConnection con;
         SqlCommand command;
-      public  string Gender, profileimg, Department;
+        public static string SetValueForText = "";
+        int id;
+        public  string Gender, profileimg, Department;
 
         public Form1()
         {
             InitializeComponent();
             con = new SqlConnection(path);
-            
+            Name.Text = Form2.Name;
+            id = Form2.id;
+            Department = Form2.Department;
+            Gender = Form2.Gender;
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            MessageBox.Show(Gender);
+            if(Gender=="Male")
+            {
+                rbmale.Checked=true;
+            }
+            if (Gender == "Female")
+            {
+                rbfemale.Checked = true;
+            }
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -49,7 +64,9 @@ namespace EmployeePayrollAppWindows
             {
                 try
                 {
-
+                    SetValueForText = Name.Text;
+                    Form2 f2 = new Form2();
+                    f2.Show();
 
                     if (rbmale.Checked)
                     {
@@ -111,6 +128,7 @@ namespace EmployeePayrollAppWindows
                     con.Close();
                     MessageBox.Show("Your action has been recorded");
                     clear();
+                  
                 }
                 catch (Exception ex)
                 {
@@ -121,7 +139,7 @@ namespace EmployeePayrollAppWindows
         public void clear()
         {
             Name.Text = "";
-            Salary.Value = 0;
+            Salary.Value = 1;
             Notes.Text = "";
         }
         private void label19_Click(object sender, EventArgs e)
@@ -129,7 +147,93 @@ namespace EmployeePayrollAppWindows
 
         }
 
-       
+        private void Notes_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+
+            if (Name.Text == "")
+            {
+                MessageBox.Show("Please Fill All Feild");
+            }
+            else
+            {
+                try
+                {
+                    
+
+                    if (rbmale.Checked)
+                    {
+                        Gender = "Male";
+                    }
+                    else
+                    {
+                        Gender = "Female";
+                    }
+                    if (hr.Checked)
+                    {
+                        Department = "HR";
+                    }
+                    else if (sales.Checked)
+                    {
+                        Department = "Sales";
+                    }
+                    else if (finance.Checked)
+                    {
+                        Department = "Finance";
+                    }
+                    else if (engineer.Checked)
+                    {
+                        Department = "Engineer";
+                    }
+                    else
+                    {
+                        Department = "Others";
+                    }
+
+                    if (propic1.Checked)
+                    {
+                        profileimg = "1";
+                    }
+                    else if (propic2.Checked)
+                    {
+                        profileimg = "2";
+                    }
+                    else if (propic3.Checked)
+                    {
+                        profileimg = "3";
+                    }
+                    else
+                    {
+                        profileimg = "4";
+                    }
+
+                    con.Open();
+                    SqlCommand command = new SqlCommand("Update", this.con);
+                    command.CommandType = System.Data.CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@ID", id);
+                    command.Parameters.AddWithValue("@Name", Name.Text);
+                    command.Parameters.AddWithValue("@ProfilePic", profileimg);
+                    command.Parameters.AddWithValue("@Gender", Gender);
+                    command.Parameters.AddWithValue("@Department", Department);
+                    command.Parameters.AddWithValue("@Salary", Salary.Value);
+                    command.Parameters.AddWithValue("@Date", Date.Value);
+                    command.Parameters.AddWithValue("@Notes", Notes.Text);
+                    command.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Your action has been recorded");
+                    clear();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
 
         private void Name_TextChanged(object sender, EventArgs e)
         {

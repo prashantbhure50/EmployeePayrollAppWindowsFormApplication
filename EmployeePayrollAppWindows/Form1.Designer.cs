@@ -64,7 +64,7 @@ namespace EmployeePayrollAppWindows
             this.Salary = new System.Windows.Forms.TrackBar();
             this.Date = new System.Windows.Forms.DateTimePicker();
             this.label17 = new System.Windows.Forms.Label();
-            this.Reset = new System.Windows.Forms.Button();
+            this.update = new System.Windows.Forms.Button();
             this.Notes = new System.Windows.Forms.RichTextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -394,14 +394,15 @@ namespace EmployeePayrollAppWindows
             this.label17.TabIndex = 43;
             this.label17.Text = "Notes";
             // 
-            // Reset
+            // update
             // 
-            this.Reset.Location = new System.Drawing.Point(999, 917);
-            this.Reset.Name = "Reset";
-            this.Reset.Size = new System.Drawing.Size(112, 34);
-            this.Reset.TabIndex = 46;
-            this.Reset.Text = "Reset";
-            this.Reset.UseVisualStyleBackColor = true;
+            this.update.Location = new System.Drawing.Point(999, 917);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(112, 34);
+            this.update.TabIndex = 46;
+            this.update.Text = "Update";
+            this.update.UseVisualStyleBackColor = true;
+            this.update.Click += new System.EventHandler(this.update_Click);
             // 
             // Notes
             // 
@@ -410,6 +411,7 @@ namespace EmployeePayrollAppWindows
             this.Notes.Size = new System.Drawing.Size(641, 144);
             this.Notes.TabIndex = 49;
             this.Notes.Text = "";
+            this.Notes.TextChanged += new System.EventHandler(this.Notes_TextChanged);
             // 
             // label16
             // 
@@ -530,7 +532,7 @@ namespace EmployeePayrollAppWindows
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.Notes);
-            this.Controls.Add(this.Reset);
+            this.Controls.Add(this.update);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.Date);
             this.Controls.Add(this.Salary);
@@ -561,7 +563,7 @@ namespace EmployeePayrollAppWindows
             this.Controls.Add(this.lblDisplay);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.Submit);
-            
+           
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Salary)).EndInit();
@@ -612,7 +614,7 @@ namespace EmployeePayrollAppWindows
         private System.Windows.Forms.TrackBar Salary;
         private System.Windows.Forms.DateTimePicker Date;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button Reset;
+        private System.Windows.Forms.Button update;
         private System.Windows.Forms.RichTextBox Notes;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.PictureBox pictureBox1;
