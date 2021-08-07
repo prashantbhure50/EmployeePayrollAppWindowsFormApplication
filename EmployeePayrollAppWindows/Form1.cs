@@ -28,11 +28,14 @@ namespace EmployeePayrollAppWindows
             id = Form2.id;
             Department = Form2.Department;
             Gender = Form2.Gender;
+            profileimg = Form2.pic;
 
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+       
+
+        public void Form1_Load(object sender, EventArgs e)
         {
            
             if(Gender=="Male")
@@ -79,6 +82,7 @@ namespace EmployeePayrollAppWindows
             {
                 propic4.Checked = true;
             }
+            
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -100,9 +104,7 @@ namespace EmployeePayrollAppWindows
             {
                 try
                 {
-                    SetValueForText = Name.Text;
-                    Form2 f2 = new Form2();
-                    f2.Show();
+                  
 
                     if (rbmale.Checked)
                     {
@@ -161,6 +163,9 @@ namespace EmployeePayrollAppWindows
                     command.Parameters.AddWithValue("@Date", Date.Value);
                     command.Parameters.AddWithValue("@Notes", Notes.Text);
                     command.ExecuteNonQuery();
+                    Form2 f = new Form2();
+                    f.Show();
+                    f.display();
                     con.Close();
                     MessageBox.Show("Your action has been recorded");
                     clear();
@@ -259,10 +264,12 @@ namespace EmployeePayrollAppWindows
                     command.Parameters.AddWithValue("@Date", Date.Value);
                     command.Parameters.AddWithValue("@Notes", Notes.Text);
                     command.ExecuteNonQuery();
+                    Form2 f = new Form2();
+                    f.Show();
+                    f.display();
                     con.Close();
                     MessageBox.Show("Your action has been recorded");
                     clear();
-
                 }
                 catch (Exception ex)
                 {
@@ -276,9 +283,6 @@ namespace EmployeePayrollAppWindows
             //Name.Clear();
         }
       
-
-        
-
         private void Salary_Scroll(object sender, EventArgs e)
         {
             label19.Text = Salary.Value.ToString();
